@@ -21,7 +21,6 @@
 ;; interface
 (menu-bar-mode -1)
 (tool-bar-mode -1)
-(scroll-bar-mode -1)
 (setq inhibit-splash-screen (< 1 (length command-line-args)))
 (blink-cursor-mode 0)
 (setq visible-cursor nil)
@@ -42,10 +41,6 @@
 (setq scroll-error-top-bottom t)
 (setq next-screen-context-lines 4)
 (setq scroll-preserve-screen-position t)
-
-(setq mouse-wheel-scroll-amount '(2))
-(setq mouse-wheel-progressive-speed nil)
-(setq mouse-wheel-follow-mouse t)
 
 (global-unset-key (kbd "C-h"))
 (define-key key-translation-map (kbd "C-h") (kbd "<DEL>"))
@@ -85,10 +80,6 @@
 (package-install-with-refresh 'diminish)
 
 
-;; theme
-(package-install-with-refresh 'vscode-dark-plus-theme)
-(load-theme 'vscode-dark-plus t)
-
 ;; require my lisp
 (require 'init-skk)
 (require 'init-ivy)
@@ -105,23 +96,6 @@
 
 (require 'init-evil)
 
-
-;; fonts
-(if window-system
-    (cond ((eq system-type 'gnu/linux)
-           (create-fontset-from-ascii-font
-            "cica-12:weight=normal:slant=normal"
-            nil
-            "Cica")
-           (set-fontset-font
-            "fontset-Cica"
-            'unicode
-            "cica:weight=normal:slant=normal"
-            nil
-            'append)
-           (add-to-list 'default-frame-alist '(font . "fontset-Cica"))
-           )
-          ((eq system-type 'windows-nt))))
 
 (provide 'init)
 ;;; init.el ends here
