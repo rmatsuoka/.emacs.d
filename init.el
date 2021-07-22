@@ -20,7 +20,6 @@
 
 ;; interface
 (menu-bar-mode -1)
-(tool-bar-mode -1)
 (setq inhibit-splash-screen (< 1 (length command-line-args)))
 (blink-cursor-mode 0)
 (setq visible-cursor nil)
