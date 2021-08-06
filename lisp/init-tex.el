@@ -5,11 +5,6 @@
 (setq TeX-auto-save t)
 (setq TeX-parse-self t)
 
-;;; auto completion
-(setq TeX-electric-math (cons "$" "$"))
-(setq LaTeX-electric-left-right-brace t)
-
-
 (setq TeX-font-replace-function 'TeX-font-replace-macro)
 (setq TeX-font-list '((2 "\\textbf{" "}")
                       (3 "\\textsc{" "}")
