@@ -78,6 +78,8 @@
 
 (package-install-with-refresh 'diminish)
 
+(when (display-graphic-p)
+  (require 'init-x))
 
 ;; require my lisp
 (require 'init-skk)
