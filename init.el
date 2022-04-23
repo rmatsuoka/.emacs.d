@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 ;; Written by Ryuichi Matsuoka
 
 
@@ -43,7 +45,6 @@
 
 (global-unset-key (kbd "C-h"))
 (define-key key-translation-map (kbd "C-h") (kbd "<DEL>"))
-;;(global-set-key (kbd "C-h") 'delete-backward-char)
 (global-set-key (kbd "M-h") 'backward-kill-word)
 (global-set-key (kbd "C-x ?") 'help-command)
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -52,10 +53,6 @@
 ;; dired
 (setq dired-dwim-target t)
 (add-hook 'dired-mode-hook 'dired-hide-details-mode)
-
-
-;; ediff
-(setq ediff-window-setup-function 'ediff-setup-windows-plain)
 
 
 ;; Load path
@@ -94,9 +91,6 @@
 ;; prog
 (require 'init-prog)
 (require 'init-python)
-
-(require 'init-evil)
-
 
 (provide 'init)
 ;;; init.el ends here
