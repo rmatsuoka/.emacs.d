@@ -91,6 +91,7 @@
 ;; prog
 (require 'init-prog)
 (require 'init-python)
+(require 'init-haskell)
 
 (provide 'init)
 ;;; init.el ends here
